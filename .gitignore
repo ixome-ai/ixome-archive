@@ -1,3 +1,4 @@
+# /home/vincent/ixome/ixome-archive/.gitignore
 # Python caches and temps
 __pycache__/
 *.pyc
@@ -39,20 +40,25 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Add more if needed (e.g., sensitive .env files)
+# Sensitive files
 .env
 secrets.py
+.env.local
+.env.production
+*.key
+*.pem
+credentials.json
 
 # Nuxt.js
 .nuxt/
 dist/
+build/
 
 # Strapi
-dist/
-build/
 .cache/
 .strapi/
 exports/
+public/uploads/
 
 # Flask/Agents
 *.db
@@ -67,15 +73,9 @@ items.json
 *.pkl
 *.h5
 
-# Additional env/secrets
-.env.local
-.env.production
-*.key
-*.pem
-credentials.json
-# Ixome archive-specific
-security/
-virtual_env/
+# Archive-specific
 snapone_profile/
-__pycache__/
-*.pyc
+virtual_env/
+backups/
+templates/pasona/
+.git/objects/
